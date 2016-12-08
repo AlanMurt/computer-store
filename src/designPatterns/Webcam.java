@@ -3,7 +3,7 @@ package designPatterns;
 /**
  * Created by Alan on 08/12/2016.
  */
-public class Webcam extends Computer{
+public class Webcam extends featureDecorator{
     Computer computer;
 
     public Webcam(Computer computer){
