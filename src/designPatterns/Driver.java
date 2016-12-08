@@ -6,13 +6,27 @@ package designPatterns;
 public class Driver {
     public static void main(String args[]){
 
-        DellComputer dellComputer = new DellComputer();
-        dellComputer.prepareForSale();
+        //order a dell computer with no added features
+        Computer dellComputer1 = new DellComputer();
+        dellComputer1.prepareForSale();
 
-        MacComputer macComputer = new MacComputer();
+        //order a dell computer with bluetooth only
+        Computer dellComputer2 = new DellComputer();
+        dellComputer2 = new Bluetooth(dellComputer2);
+        System.out.println(dellComputer2.getDescription() + " at a cost of €" + dellComputer2.cost());
+        dellComputer2.prepareForSale();
+
+        //order a dell computer with bluetooth and webcam
+        Computer dellComputer3 = new DellComputer();
+        dellComputer3 = new Bluetooth(dellComputer3);
+        dellComputer3 = new Webcam(dellComputer3);
+        System.out.println(dellComputer3.getDescription() + " at a cost of €" + dellComputer3.cost());
+        dellComputer3.prepareForSale();
+
+        Computer macComputer = new MacComputer();
         macComputer.prepareForSale();
 
-        HPComputer hpComputer = new HPComputer();
+        Computer hpComputer = new HPComputer();
         hpComputer.prepareForSale();
     }
 }

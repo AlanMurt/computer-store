@@ -5,8 +5,19 @@ package designPatterns;
  */
 public class MacComputer extends Computer{
 
+    public MacComputer(){
+        description = "Mac Computer";
+    }
+
     @Override
     public void gatherParts(){
         System.out.println("Parts gathered for Mac computer");
     }
+
+    @Override
+    public int cost() {
+        return 800;
+    }
+
+
 }
