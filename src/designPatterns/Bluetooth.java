@@ -3,8 +3,9 @@ package designPatterns;
 /**
  * Created by Alan on 08/12/2016.
  */
+
 public class Bluetooth extends Computer{
-    Computer computer;
+    private final Computer computer;
 
     public Bluetooth(Computer computer){
         this.computer = computer;

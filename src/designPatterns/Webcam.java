@@ -4,7 +4,7 @@ package designPatterns;
  * Created by Alan on 08/12/2016.
  */
 public class Webcam extends featureDecorator{
-    Computer computer;
+    private final Computer computer;
 
     public Webcam(Computer computer){
         this.computer = computer;

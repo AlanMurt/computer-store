@@ -1,7 +1,5 @@
 package designPatterns;
 
-import java.util.Random;
-
 /**
  * Created by Alan on 07/12/2016.
  */
@@ -9,26 +7,26 @@ public abstract class Computer {
 
     String description = "Unknown Computer";
 
-    public void prepareForSale(){
+    public final void prepareForSale(){
         gatherParts();
         assemble();
         installSoftware();
         box();
     }
 
-    public abstract void gatherParts();
+    protected abstract void gatherParts();
 
 
 
-    public void assemble(){
+    private void assemble(){
         System.out.println("Computer is assembled");
     }
 
-    public void installSoftware(){
+    private void installSoftware(){
         System.out.println("Software is installed on the computer");
     }
 
-    public void box(){
+    private void box(){
         System.out.println("Computer is boxed\n");
     }
 

@@ -3,7 +3,7 @@ package designPatterns;
 /**
  * Created by Alan on 07/12/2016.
  */
-public class Driver {
+class Driver {
     public static void main(String args[]){
 
         //order a dell computer with no added features
