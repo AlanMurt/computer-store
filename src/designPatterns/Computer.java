@@ -5,7 +5,17 @@ package designPatterns;
  */
 public abstract class Computer {
 
+    //Strategy
+    private Payment payment;
     String description = "Unknown Computer";
+
+
+    public void executePayment(Payment paymentMethod){
+        paymentMethod.pay();
+    }
+    //END Strategy
+
+
 
     public final void prepareForSale(){
         gatherParts();
@@ -27,7 +37,7 @@ public abstract class Computer {
     }
 
     private void box(){
-        System.out.println("Computer is boxed\n");
+        System.out.println("Computer is boxed");
     }
 
 
