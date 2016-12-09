@@ -5,13 +5,11 @@ import java.util.Random;
 /**
  * Created by Alan on 08/12/2016.
  */
-public enum MacAddress {
+enum MacAddress {
     INSTANCE;
     private static MacAddress instance = null;
 
-
-    private MacAddress(){
-    }
+    MacAddress(){}
 
     public static MacAddress getInstance(){
         if(instance == null){

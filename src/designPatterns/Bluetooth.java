@@ -4,7 +4,7 @@ package designPatterns;
  * Created by Alan on 08/12/2016.
  */
 
-public class Bluetooth extends Computer{
+public class Bluetooth extends FeatureDecorator{
     private final Computer computer;
 
     public Bluetooth(Computer computer){
