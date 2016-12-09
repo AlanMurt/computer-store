@@ -5,8 +5,9 @@ package designPatterns;
  */
 public class MacComputer extends Computer{
 
-    public MacComputer(){
+    public MacComputer() {
         description = "Mac Computer";
+        setMacAddress(MacAddress.getInstance().generateMacAddress());
     }
 
     @Override

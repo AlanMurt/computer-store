@@ -5,6 +5,16 @@ package designPatterns;
  */
 public abstract class Computer {
 
+    public String getMacAddress() {
+        return macAddress;
+    }
+
+    public void setMacAddress(String macAddress) {
+        this.macAddress = macAddress;
+    }
+
+    String macAddress;
+
     //Strategy
     private Payment payment;
     String description = "Unknown Computer";

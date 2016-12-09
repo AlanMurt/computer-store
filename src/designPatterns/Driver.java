@@ -27,12 +27,16 @@ class Driver {
         dellComputer3.executePayment(new Paypal());
         System.out.println("\n");
 
+        //MacAddress.getInstance().generateMacAddress();
+
         //Use Computer.java to see change in behaviour when it changes strategy
 
 
 
         Computer macComputer = new MacComputer();
         macComputer.prepareForSale();
+        macComputer.getMacAddress();
+        System.out.println("Mac Address: " + macComputer.getMacAddress());
         System.out.println("\n");
 
         Computer hpComputer = new HPComputer();

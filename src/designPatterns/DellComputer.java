@@ -6,6 +6,7 @@ package designPatterns;
 public class DellComputer extends Computer{
     public DellComputer(){
         description = "Dell Computer";
+        setMacAddress(MacAddress.getInstance().generateMacAddress());
     }
 
     @Override

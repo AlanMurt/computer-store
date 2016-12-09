@@ -6,6 +6,7 @@ package designPatterns;
 public class HPComputer extends Computer{
     public HPComputer(){
         description = "HP Computer";
+        setMacAddress(MacAddress.getInstance().generateMacAddress());
     }
 
     @Override
