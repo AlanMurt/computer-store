@@ -3,30 +3,9 @@ package designPatterns;
 /**
  * Created by Alan on 07/12/2016.
  */
-public abstract class Computer {
+abstract class Computer {
 
-    private String macAddress;
-    //private Payment payment;
-    String description = "Unknown Computer";
-
-    public String getMacAddress() {
-        return macAddress;
-    }
-
-    void setMacAddress(String macAddress) {
-        this.macAddress = macAddress;
-    }
-
-
-
-
-    public void executePayment(Payment paymentMethod){
-        paymentMethod.pay();
-    }
-
-
-
-    public final void prepareForSale(){
+    final void prepareForSale(){
         gatherParts();
         assemble();
         installSoftware();
@@ -35,7 +14,23 @@ public abstract class Computer {
 
     protected abstract void gatherParts();
 
+    //private Payment payment;
+    String description = "Unknown Computer";
 
+    private String macAddress;
+
+
+    String getMacAddress() {
+        return macAddress;
+    }
+
+    void setMacAddress(String macAddress) {
+        this.macAddress = macAddress;
+    }
+
+    void executePayment(Payment paymentMethod){
+        paymentMethod.pay();
+    }
 
     private void assemble(){
         System.out.println("Computer is assembled");
@@ -49,10 +44,10 @@ public abstract class Computer {
         System.out.println("Computer is boxed");
     }
 
-    public String getDescription(){
+    String getDescription(){
         return description;
     }
 
-    public abstract int cost();
+    abstract int cost();
 
 }

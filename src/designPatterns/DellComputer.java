@@ -18,6 +18,4 @@ public class DellComputer extends Computer{
     public int cost() {
         return 500;
     }
-
-
 }

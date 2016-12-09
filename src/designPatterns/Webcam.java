@@ -10,7 +10,6 @@ public class Webcam extends FeatureDecorator {
         this.computer = computer;
     }
 
-
     @Override
     public void gatherParts() {
         System.out.println("Parts gathered for " + computer.getDescription());

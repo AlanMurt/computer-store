@@ -31,8 +31,6 @@ class Driver {
 
         //Use Computer.java to see change in behaviour when it changes strategy
 
-
-
         Computer macComputer = new MacComputer();
         macComputer.prepareForSale();
         macComputer.getMacAddress();
