@@ -5,7 +5,7 @@ package designPatterns;
  */
 public class Cash implements Payment {
 
-    @Override
+
     public void pay() {
         System.out.println("Selected payment option: Cash");
     }
