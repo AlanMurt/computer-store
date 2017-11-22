@@ -5,8 +5,8 @@ package designPatterns;
  */
 public class CreditCard implements Payment {
 
-    @Override
+
     public void pay() {
-        System.out.println("Selected payment option: Credit Card");
+        System.out.println("Selected payment option: Credit Card\n");
     }
 }

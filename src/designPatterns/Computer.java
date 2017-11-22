@@ -5,14 +5,9 @@ package designPatterns;
  */
 abstract class Computer {
 
-    final void prepareForSale(){
-        gatherParts();
-        assemble();
-        installSoftware();
-        box();
-    }
 
-    protected abstract void gatherParts();
+
+    abstract void gatherParts();
 
     //private Payment payment;
     String description = "Unknown Computer";
@@ -28,19 +23,15 @@ abstract class Computer {
         this.macAddress = macAddress;
     }
 
-    void executePayment(Payment paymentMethod){
-        paymentMethod.pay();
-    }
-
-    private void assemble(){
+    void assemble(){
         System.out.println("Computer is assembled");
     }
 
-    private void installSoftware(){
+    void installSoftware(){
         System.out.println("Software is installed on the computer");
     }
 
-    private void box(){
+    void box(){
         System.out.println("Computer is boxed");
     }
 
@@ -50,4 +41,13 @@ abstract class Computer {
 
     abstract int cost();
 
+    Computer addBluetooth(Computer computer){
+        computer = new Bluetooth(computer);
+        return computer;
+    }
+
+    Computer addWebcam(Computer computer){
+        computer = new Webcam(computer);
+        return computer;
+    }
 }

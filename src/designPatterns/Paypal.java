@@ -7,6 +7,6 @@ public class Paypal implements Payment {
 
 
     public void pay() {
-        System.out.print("Selected payment option: Paypal");
+        System.out.print("Selected payment option: Paypal\n\n");
     }
 }

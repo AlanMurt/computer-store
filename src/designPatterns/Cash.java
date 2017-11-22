@@ -7,6 +7,6 @@ public class Cash implements Payment {
 
 
     public void pay() {
-        System.out.println("Selected payment option: Cash");
+        System.out.println("Selected payment option: Cash\n");
     }
 }
