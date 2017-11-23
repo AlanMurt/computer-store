@@ -7,18 +7,48 @@ public class ComputerStore {
         this.factory = factory;
     }
 
-    public Computer orderComputer(String type, boolean addBluetooth, boolean addWebcam){
+    public Computer orderComputerWithNoAddedFeature(String type){
         Computer computer;
 
         computer = factory.createComputer(type);
 
-        if(addBluetooth){
-            computer = computer.addBluetooth(computer);
-        }
-        if(addWebcam){
-            computer = computer.addWebcam(computer);
-        }
-        
+        System.out.println(computer.getDescription() + " at a cost of €" + computer.cost());
+        prepareForSale(computer);
+
+        return computer;
+    }
+
+    public Computer orderComputerWithBluetooth(String type){
+        Computer computer;
+
+        computer = factory.createComputer(type);
+        computer = computer.addBluetooth(computer);
+
+        System.out.println(computer.getDescription() + " at a cost of €" + computer.cost());
+        prepareForSale(computer);
+
+        return computer;
+    }
+
+    public Computer orderComputerWithWebcam(String type){
+        Computer computer;
+
+        computer = factory.createComputer(type);
+        computer = computer.addWebcam(computer);
+
+        System.out.println(computer.getDescription() + " at a cost of €" + computer.cost());
+        prepareForSale(computer);
+
+        return computer;
+    }
+
+    public Computer orderComputerWithBluetoothAndWebcam(String type){
+        Computer computer;
+
+        computer = factory.createComputer(type);
+        computer = computer.addBluetooth(computer);
+        computer = computer.addWebcam(computer);
+
         System.out.println(computer.getDescription() + " at a cost of €" + computer.cost());
         prepareForSale(computer);
 
