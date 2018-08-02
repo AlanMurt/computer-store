@@ -3,8 +3,8 @@ package designPatterns;
 public class ComputerStore {
     SimpleComputerFactory factory;
 
-    public ComputerStore(SimpleComputerFactory factory){
-        this.factory = factory;
+    public ComputerStore(){
+        this.factory = new SimpleComputerFactory();
     }
 
     public Computer orderComputerWithNoAddedFeature(String type){
@@ -63,8 +63,8 @@ public class ComputerStore {
         computer.box();
     }
 
-    void executePayment(Payment paymentMethod){
-        paymentMethod.pay();
+    void executePayment(PaymentContext paymentContext){
+        paymentContext.executePayment();
     }
 
 

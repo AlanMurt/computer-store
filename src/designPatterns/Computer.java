@@ -9,7 +9,7 @@ abstract class Computer {
 
     abstract void gatherParts();
 
-    //private Payment payment;
+    //private PaymentStrategy payment;
     String description = "Unknown Computer";
 
     private String macAddress;

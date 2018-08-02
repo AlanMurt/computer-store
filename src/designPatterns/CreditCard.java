@@ -3,7 +3,7 @@ package designPatterns;
 /**
  * Created by Alan on 08/12/2016.
  */
-public class CreditCard implements Payment {
+public class CreditCard implements PaymentStrategy {
 
 
     public void pay() {

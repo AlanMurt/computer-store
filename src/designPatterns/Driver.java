@@ -6,6 +6,8 @@ package designPatterns;
 class Driver {
     public static void main(String args[]){
 
+
+
         //order a dell computer with no added features
         //Computer dellComputer1 = new DellComputer();
         //dellComputer1.prepareForSale();
@@ -43,20 +45,24 @@ class Driver {
         //System.out.println("\n");
 
 
-        SimpleComputerFactory factory1 = new SimpleComputerFactory();
-        ComputerStore cs = new ComputerStore(factory1);
-        cs.orderComputer("HP", true, false);
-        cs.executePayment((new Cash()));
+        //SimpleComputerFactory factory1 = new SimpleComputerFactory();
+        ComputerStore cs = new ComputerStore();
+        cs.orderComputerWithBluetooth(ComputerMake.HP.name());
+        PaymentContext paymentContext = new PaymentContext(new Cash());
+        cs.executePayment(paymentContext);
 
-        SimpleComputerFactory factory2 = new SimpleComputerFactory();
-        cs = new ComputerStore(factory2);
-        cs.orderComputer("Dell", true, true);
-        cs.executePayment((new Paypal()));
+        //todo: send email (builder)
 
-        SimpleComputerFactory factory3 = new SimpleComputerFactory();
-        cs = new ComputerStore(factory3);
-        cs.orderComputer("Mac", false, true);
-        cs.executePayment((new CreditCard()));
+
+        //SimpleComputerFactory factory2 = new SimpleComputerFactory();
+        //cs = new ComputerStore(factory2);
+        //cs.orderComputer("Dell", true, true);
+        //cs.executePayment((new Paypal()));
+
+        //SimpleComputerFactory factory3 = new SimpleComputerFactory();
+        //cs = new ComputerStore(factory3);
+        //cs.orderComputer("Mac", false, true);
+        //cs.executePayment((new CreditCard()));
 
     }
 }
